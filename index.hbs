@@ -4,9 +4,15 @@
 {{!-- The big featured header --}}
 <header {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <nav>
-        {{#if @blog.logo}}<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.logo}}
+            <a href="{{@blog.url}}">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+            </a>
+        {{/if}}
         {{#if @blog.navigation}}
-            <a href="#"><span>Menu</span></a>
+            <a href="#">
+                <span>Menu</span>
+            </a>
         {{/if}}
     </nav>
     <div>
@@ -15,7 +21,9 @@
             <h2>{{@blog.description}}</h2>
         </div>
     </div>
-    <a href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    <a href="#content" data-offset="-45">
+        <span class="hidden">Scroll Down</span>
+    </a>
 </header>
 
 {{!-- The main content area on the homepage --}}

@@ -1,44 +1,44 @@
 {
-    "name": "Abhiy_theme",
-    "description": "Abhishek Kumar Singh",
-    "demo": "https://abhiy.com",
-    "version": "0.0.1",
-    "engines": {
-        "ghost": ">=0.9.0 <1.0.0"
-    },
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "author": {
-        "name": "Abhishek Kumar Singh",
-        "email": "abhishek291093@gmail.org",
-        "url": "https://abhiy.com"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Abhiy",
-            "Personal Blogs"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "Abhiy",
-        "Abhishek",
-        "Kumar",
-        "Singh",
-        "Abhishek Kumar Singh"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yabhis/abhiy_theme"
-    },
-    "bugs": "https://github.com/yabhis/abhiy_theme/issues",
-    "contributors": [
-        "https://abhiy.com",
-        "Abhishek Kumar Singh",
-        "https://github.com/yabhis/abhiy_theme/graphs/contributors"
+  "name": "Abhiy_theme",
+  "description": "Abhishek Kumar Singh",
+  "demo": "https://abhiy.com",
+  "version": "0.0.1",
+  "engines": {
+    "ghost": ">=0.9.0 <1.0.0"
+  },
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Abhishek Kumar Singh",
+    "email": "abhishek291093@gmail.org",
+    "url": "https://abhiy.com"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Abhiy",
+      "Personal Blogs"
     ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "Abhiy",
+    "Abhishek",
+    "Kumar",
+    "Singh",
+    "Abhishek Kumar Singh"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yabhis/abhiy_theme"
+  },
+  "bugs": "https://github.com/yabhis/abhiy_theme/issues",
+  "contributors": [
+    "https://abhiy.com",
+    "Abhishek Kumar Singh",
+    "https://github.com/yabhis/abhiy_theme/graphs/contributors"
+  ]
 }

@@ -2,25 +2,26 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
-<header {{#if tag.image}} style="background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+<header {{#if tag.image}} style="background-image: url({{tag.image}}){{else}}{{#if
+        @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
     <nav>
-        {{#if @blog.logo}}<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.logo}}<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>{{/if}}
         {{#if @blog.navigation}}
             <a href="#"><span>Menu</span></a>
         {{/if}}
     </nav>
     <div>
         {{#tag}}
-        <div>
-            <h1>{{name}}</h1>
-            <h2>
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    A {{../pagination.total}}-post collection
-                {{/if}}
-            </h2>
-        </div>
+            <div>
+                <h1>{{name}}</h1>
+                <h2>
+                    {{#if description}}
+                        {{description}}
+                    {{else}}
+                        A {{../pagination.total}}-post collection
+                    {{/if}}
+                </h2>
+            </div>
         {{/tag}}
     </div>
 </header>
