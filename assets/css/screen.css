@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.dark-color {
+    color: #3D464D;
+}
+
+.medium-color {
+    color: #47525D;
+}
+
+.light-color {
+    color: #7B8994;
+}
+
+.white-color {
+    color: #ffffff;
+}
+
+.blue-color {
+    color: #0077B5;
+}
+
+.dark-background {
+    background-color: #3D464D;
+}
+
+.medium-background {
+    background-color: #47525D;
+}
+
+.light-background {
+    background-color: #7B8994;
+}
+
+.background-color {
+    background-color: #F3F5F7;
+}
+
+.white-background {
+    background-color: #fff;
+}
+
+.blue-background {
+    color: #0077B5;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-start {
+    justify-content: flex-start;
+}
+
+.row-center {
+    justify-content: center;
+}
+
+.row-end {
+    justify-content: flex-end;
+}
+
+.column-start {
+    align-items: flex-start;
+}
+
+.column-center {
+    align-items: center;
+}
+
+.column-end {
+    align-items: flex-end;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.flex-9 {
+    flex: 9;
+}
+
+.flex-10 {
+    flex: 10;
+}
+
+.flex-11 {
+    flex: 11;
+}
+
+.flex-12 {
+    flex: 12;
+}
