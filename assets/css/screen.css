@@ -135,12 +135,70 @@ body {
     flex: 12;
 }
 
+.margin-left-15 {
+    margin-left: 20px;
+}
+
 .width-100 {
     width: 100%;
 }
 
 .header {
+
+}
+
+.main-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3D464D;
+}
+
+.main-subheading {
+    font-size: 18px;
+    font-weight: 400;
+    color: #47525D;
+    margin-top: 2px;
+}
+
+.main-subheading-2 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #7B8994;
+    margin-top: 4px;
+}
+
+.main-subheading-3 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #3D464D;
+    margin-top: 6px;
+}
+
+.cover-pic {
     height: 400px;
     background-size: cover;
-    background-position: center;
+    background: no-repeat center;
+}
+
+.user-details-box {
+    width: 715px;
+    padding: 15px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 45%, rgba(255, 255, 255, 1) 64%, rgba(250, 250, 250, 1) 71%, rgba(243, 245, 247, 1) 100%);
+    margin: -135px auto 0;
+    box-shadow: 0 -30px 50px rgba(0, 0, 0, 0.5);
+}
+
+.profile-pic-section {
+    width: 240px;
+    height: 240px;
+    background: url(../images/profile-pic.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.profile-detail-section {
+
+}
+
+.header-work-section {
+    margin-top: 17px;
 }

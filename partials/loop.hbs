@@ -11,7 +11,10 @@
         </section>
         <footer>
             {{#if author.image}}
-                <img src="{{author.image}}" alt="{{author.name}}" nopin="nopin"/>{{/if}} {{author}} {{tags prefix="on"}}
+                <img src="{{author.image}}" alt="{{author.name}}" nopin="nopin"/>
+            {{/if}}
+            {{author}}
+            {{tags prefix="on"}}
             <time datetime="{{date format=" YYYY-MM-DD "}}">{{date format="DD MMMM YYYY"}}</time>
         </footer>
     </article>

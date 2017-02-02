@@ -3,8 +3,39 @@
 
 {{!-- The big featured header --}}
 
-<header class="width-100 header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<header class="width-100 header">
+    <div class="cover-pic" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    </div>
+    <div class="user-details-box flex-row">
+        <div class="profile-pic-section"></div>
+        <div class="profile-detail-section flex-1 margin-left-15">
+            <h1 class="main-heading">Abhishek Kumar Singh</h1>
+            <h2 class="main-subheading">Art Direction & Visual Design at vanschneider</h2>
+            <p class="main-subheading-2">Pune, India | Design</p>
+            <div class="header-work-section">
+                <div class="single flex-row main-subheading-3">
+                    <div class="left flex-2 light-color">Current</div>
+                    <div class="right flex-10 dark-color">House of van Schneider, AIGA New York, Memomi Labs Inc</div>
+                </div>
+                <div class="single flex-row main-subheading-3">
+                    <div class="left flex-2 light-color">Previous</div>
+                    <div class="right flex-10 dark-color">Spotify, Red Bull, Digital Agency - Fantasy Interactive (Fi)
+                    </div>
+                </div>
+            </div>
+            <div class="social-section flex-row">
+                <div>
+                    <i class="fa fa-camera-retro fa-lg"></i> fa-lg
+                    <i class="fa fa-camera-retro fa-2x"></i> fa-2x
+                    <i class="fa fa-camera-retro fa-3x"></i> fa-3x
+                    <i class="fa fa-camera-retro fa-4x"></i> fa-4x
+                    <i class="fa fa-camera-retro fa-5x"></i> fa-5x
 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--{{navigation}}-->
 </header>
 
 <!--<header {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">-->
