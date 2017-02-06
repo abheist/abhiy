@@ -1,9 +1,13 @@
 {{!-- Previous/next page links - only displayed on page 2+ --}}
-{{pagination}}
+<!--{{pagination}}-->
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
 
 
+
+
+
+    <!--
     <article class="{{post_class}} every-post-home">
         <div class="flex-row">
             {{#if author.image}}
@@ -11,10 +15,13 @@
                      style="background: url({{author.image}}); background-size: cover; background-position: center;
                              background-repeat: no-repeat; border-radius: 100%;"></div>
             {{/if}}
-            <div class="flex-column row-center margin-left-15">
-                {{author}}
-                {{tags prefix="on"}}
-                <time datetime="{{date format=" YYYY-MM-DD "}}">{{date format="DD MMMM YYYY"}}</time>
+            <div class="flex-column row-center margin-left-10">
+                <div>
+                    <span class="blue-color">{{author}}</span>
+                    <span class="every-post-tag">{{tags prefix="on&nbsp;"}}</span>
+                </div>
+                <time class="every-post-time" datetime="{{date format=" YYYY-MM-DD "}}">{{date
+            format="DD MMMM YYYY"}}</time>
             </div>
         </div>
         <header>
@@ -23,16 +30,21 @@
                      style="background: url({{image}}); background-size: cover; background-position: center;
                              background-repeat: no-repeat;"></div>
             {{/if}}
-            <h2 class="every-post-heading"><a href="{{url}}">{{title}}</a></h2>
+            <h2 class="every-post-heading {{#if image}} margin-left-25 {{/if}}"><a
+                    href="{{url}}">{{title}}</a></h2>
         </header>
         <section>
-            <p>{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
+            {{#if image}}
+                <p class="every-post-content">{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
+            {{else}}
+                <p class="every-post-content">{{excerpt words="79"}} <a href="{{url}}">&raquo;</a></p>
+            {{/if}}
         </section>
     </article>
 
-
+-->
 
 
 {{/foreach}}
 {{!-- Previous/next page links - displayed on every page --}}
-{{pagination}}
+<!--{{pagination}}-->
