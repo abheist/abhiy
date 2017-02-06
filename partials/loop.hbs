@@ -1,68 +1,33 @@
 {{!-- Previous/next page links - only displayed on page 2+ --}}
-<!--{{pagination}}-->
+{{pagination}}
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
 
 
-    <article class="single-post">
+    <article class="{{post_class}} single-post">
         <div class="post-meta flex-row column-center">
-            <div class="author-pic"
-                 style="background: url('/assets/images/profile-pic.jpg'); background-size: cover;
-                        background-position: center;"></div>
-            <div class="author-meta">
-                <p class="author-name light-color"><span class="blue-color">Abhishek Kumar Singh</span> on <span
-                        class="blue-color">Technology</span></p>
-                <p class="post-published-date">29th October, 2017</p>
-            </div>
-        </div>
-        <div class="post-image" style="background: url('/assets/images/cover-pic.jpeg'); background-size: cover;
-                                        background-position: center;"></div>
-        <div class="post-heading-content">
-            <p class="post-heading">Do what you Love</p>
-            <p class="post-content">If you really want to do things that matters, then you’ll have to get used to this
-                word ‘NO’. If you really want to do things that matters, then you’ll have to get used to this
-                word ‘NO’ If you really want to do things that matters, then you’ll have to get used to this
-                word ‘NO’</p>
-        </div>
-    </article>
-
-
-    <!--
-    <article class="{{post_class}} every-post-home">
-        <div class="flex-row">
             {{#if author.image}}
-                <div class="every-post-user-pic"
-                     style="background: url({{author.image}}); background-size: cover; background-position: center;
-                             background-repeat: no-repeat; border-radius: 100%;"></div>
+                <div class="author-pic"
+                     style="background: url('{{author.image}}'); background-size: cover;
+                             background-position: center;"></div>
             {{/if}}
-            <div class="flex-column row-center margin-left-10">
-                <div>
-                    <span class="blue-color">{{author}}</span>
-                    <span class="every-post-tag">{{tags prefix="on&nbsp;"}}</span>
-                </div>
-                <time class="every-post-time" datetime="{{date format=" YYYY-MM-DD "}}">{{date
-            format="DD MMMM YYYY"}}</time>
+            <div class="author-meta">
+                <p class="author-name light-color"><span class="blue-color">{{author}}</span>
+                    <span class="post-tags"> {{tags prefix="on&nbsp;"}}</span>
+                </p>
+                <time class="post-published-date" datetime="{{date format=" YYYY-MM-DD "}}">{{date
+                        format="DD MMMM YYYY"}}</time>
             </div>
         </div>
-        <header>
-            {{#if image}}
-                <div class="every-post-image"
-                     style="background: url({{image}}); background-size: cover; background-position: center;
-                             background-repeat: no-repeat;"></div>
-            {{/if}}
-            <h2 class="every-post-heading {{#if image}} margin-left-25 {{/if}}"><a
-                    href="{{url}}">{{title}}</a></h2>
-        </header>
-        <section>
-            {{#if image}}
-                <p class="every-post-content">{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
-            {{else}}
-                <p class="every-post-content">{{excerpt words="79"}} <a href="{{url}}">&raquo;</a></p>
-            {{/if}}
-        </section>
+        {{#if image}}
+            <div class="post-image" style="background: url('{{image}}'); background-size: cover;
+                    background-position: center;"></div>
+        {{/if}}
+        <div class="post-heading-content padding-15 margin-top-5">
+            <p class="post-heading"><a href="{{url}}">{{title}}</a></p>
+            <p class="post-content">{{excerpt words="64"}}</p>
+        </div>
     </article>
-
--->
 
 
 {{/foreach}}

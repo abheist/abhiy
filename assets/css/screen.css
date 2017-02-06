@@ -258,6 +258,13 @@ a {
 
 .post-heading-content {
     padding: 15px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.margin-top-5 {
     margin-top: 5px;
 }
 
@@ -274,4 +281,8 @@ a {
     font-weight: 300;
     line-height: 28px;
     color: #3D464D;
+}
+
+.post-tags a {
+    color: #0077B5;
 }
