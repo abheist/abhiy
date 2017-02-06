@@ -200,8 +200,6 @@ a {
 .profile-pic-section {
     width: 240px;
     height: 240px;
-    background: url(../images/profile-pic.jpg) no-repeat center;
-    background-size: cover;
 }
 
 .profile-detail-section {
