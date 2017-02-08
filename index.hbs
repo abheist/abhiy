@@ -7,12 +7,16 @@
     <div class="cover-pic" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     </div>
     <div class="user-details-box flex-row">
-        <div class="profile-pic-section"
-             style="background: url('assets/images/profile-pic.jpg') no-repeat center;
-                    background-size: cover;"></div>
+        {{#if @blog.logo}}
+            <a href="{{@blog.url}}">
+                <div class="profile-pic-section"
+                     style="background: url('{{@blog.logo}}') no-repeat center;
+                             background-size: cover;"></div>
+            </a>
+        {{/if}}
         <div class="profile-detail-section flex-1 margin-left-15">
-            <h1 class="main-heading">Abhishek Kumar Singh</h1>
-            <h2 class="main-subheading">UI/UX Designer | Full Stack Web Developer at KisanHub</h2>
+            <h1 class="main-heading">{{@blog.title}}</h1>
+            <h2 class="main-subheading">{{@blog.description}}</h2>
             <p class="main-subheading-2">Pune, India | Design</p>
             <div class="header-work-section">
                 <div class="single flex-row main-subheading-3">
@@ -43,30 +47,6 @@
     </div>
     {{navigation}}
 </header>
-
-<!--<header {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">-->
-<!--<nav>-->
-        <!--{{#if @blog.logo}}-->
-<!--<a href="{{@blog.url}}">-->
-<!--<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>-->
-<!--</a>-->
-        <!--{{/if}}-->
-        <!--{{#if @blog.navigation}}-->
-<!--<a href="#">-->
-<!--<span>Menu</span>-->
-<!--</a>-->
-        <!--{{/if}}-->
-<!--</nav>-->
-<!--<div>-->
-<!--<div>-->
-<!--<h1>{{@blog.title}}</h1>-->
-<!--<h2>{{@blog.description}}</h2>-->
-<!--</div>-->
-<!--</div>-->
-<!--<a href="#content" data-offset="-45">-->
-<!--<span class="hidden">Scroll Down</span>-->
-<!--</a>-->
-<!--</header>-->
 
 {{!-- The main content area on the homepage --}}
 <main id="content" role="main" class="margin-top-70">
