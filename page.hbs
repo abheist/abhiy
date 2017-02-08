@@ -11,11 +11,8 @@
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
             </a>
         {{/if}}
-        {{#if @blog.navigation}}
-            <a href="#">
-                <span>Menu</span>
-            </a>
-        {{/if}}
+        {{navigation}}
+
     </header>
     <main role="main">
         <article class="{{post_class}}">

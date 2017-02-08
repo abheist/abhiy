@@ -1,17 +1,17 @@
 <div class="nav">
-    <h3>Menu</h3>
-    <a href="#">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
+
+</div>
+
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect navigation-tabs">
+    <div class="mdl-tabs__tab-bar">
         {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
-                <a href="{{url absolute="true"}}">{{label}}</a></li>
+            <a href="{{url absolute="true"}}"
+               class="mdl-tabs__tab nav-{{slug}}{{#if current}} is-active nav-current {{/if}}">{{label}}</a>
         {{/foreach}}
-    </ul>
-    {{#if @labs.subscribers}}
-        <a href="{{@blog.url}}/subscribe/">Subscribe</a>
-    {{else}}
-        <a href="{{@blog.url}}/rss/">Subscribe</a>
-    {{/if}}
+        {{#if @labs.subscribers}}
+            <a href="{{@blog.url}}/subscribe/" class="mdl-tabs__tab">Subscribe</a>
+        {{else}}
+            <a href="{{@blog.url}}/rss/" class="mdl-tabs__tab">Subscribe</a>
+        {{/if}}
+    </div>
 </div>
