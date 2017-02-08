@@ -482,3 +482,21 @@ a {
 .paged .extra-pagination {
     display: block;
 }
+
+.blog-footer {
+    height: 40px;
+    background: #3D464D;
+    color: #FFFFFF;
+}
+
+.inner-blog-footer {
+    width: 715px;
+    margin: 0 auto;
+    display: flex;
+    line-height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+    font-size: 12px;
+    text-shadow: 0;
+}
