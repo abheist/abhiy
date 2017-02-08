@@ -6,9 +6,9 @@
 <header class="width-100 header">
     <div class="cover-pic"
         {{#if tag.image}}
-         style="background-image: url({{tag.image}})"
+         style="background: url({{tag.image}}); background-size: cover; background-position: center; background-repeat: no-repeat;"
         {{else}} {{#if @blog.cover}}
-        style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+        style="background: url({{@blog.cover}}); background-size: cover; background-position: center; background-repeat: no-repeat;{{else}}no-cover{{/if}}{{/if}}">
     </div>
     <div class="other-page-headers flex-row">
         {{#if @blog.logo}}

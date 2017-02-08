@@ -5,31 +5,41 @@
 
 {{!-- Everything inside the #author tags pulls data from the author --}}
 {{#author}}
-    <header {{#if cover}} style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
-        <nav>
-            {{#if @blog.logo}}<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>{{/if}}
-            {{#if @blog.navigation}}
-                <a href="#"><span>Menu</span></a>
-            {{/if}}
-        </nav>
-    </header>
 
-    <section>
-        {{#if image}}
-            <figure>
-                <div style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
-            </figure>
-        {{/if}}
-        <h1>{{name}}</h1>
-        {{#if bio}}
-            <h2>{{bio}}</h2>
-        {{/if}}
-        <div>
-            {{#if location}}<span>{{location}}</span>{{/if}}
-            {{#if website}}<span><a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span><i></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+    <header class="width-100 header">
+        <div class="cover-pic"
+            {{#if cover}}
+            style="background: url({{cover}}{{else}}no-cover{{/if}}); background-size: cover; background-position: center; background-repeat: no-repeat;">
         </div>
-    </section>
+        <div class="other-page-headers flex-row">
+            {{#if image}}
+                <a href="{{@blog.url}}">
+                    <div class="other-page-headers-pic"
+                         style="background: url('{{image}}'); background-size: cover;
+                                 background-position: center; background-repeat: no-repeat;">
+                    </div>
+                </a>
+            {{/if}}
+            <div class="other-page-headers-meta profile-detail-section flex-1 margin-left-15">
+                <div>
+                    <h1 class="main-heading">{{name}}</h1>
+                    <h2 class="main-subheading">
+                        {{#if bio}}
+                            <h2>{{bio}}</h2>
+                        {{/if}}
+                    </h2>
+                    {{#if location}}<span>{{location}}</span>{{/if}}
+                    <span><i></i> {{plural ../pagination.total empty='No posts' singular='% post'
+                                           plural='% posts'}}</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+    <!--{{#if @blog.navigation}}-->
+        <!--<a href="#"><span>Menu</span></a>-->
+            <!--{{/if}}-->
+    </nav>
 {{/author}}
 
 {{!-- The main content area on the homepage --}}
