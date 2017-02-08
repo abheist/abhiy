@@ -410,3 +410,75 @@ a {
 .nav-current {
     color: #3D464D;
 }
+
+/*pagination*/
+
+.blog-pagination {
+    width: 715px;
+    margin: 25px auto;
+    display: flex;
+}
+
+.blog-pagination nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.older-posts,
+.newer-posts {
+    position: relative;
+}
+
+.newer-posts {
+
+}
+
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+    color: #889093;
+    border-color: #98a0a4;
+}
+
+.extra-pagination {
+    display: none;
+    border-bottom: #EBF2F6 1px solid;
+}
+
+.extra-pagination:after {
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: #E7EEF2 1px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #FFF;
+    border-radius: 100%;
+    box-shadow: #FFF 0 0 0 5px;
+}
+
+.extra-pagination .pagination {
+    width: auto;
+}
+
+/* On page2+ make all the headers smaller */
+.paged .main-header {
+    max-height: 30vh;
+}
+
+/* On page2+ show extra pagination controls at the top of post list */
+.paged .extra-pagination {
+    display: block;
+}
