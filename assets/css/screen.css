@@ -576,8 +576,3 @@ a {
 .post-content a:hover, .post-content a:focus {
     border-color: #2DB77E;
 }
-
-.single-post-content h1, h2, h3, h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    color: #1F2026;
-}
