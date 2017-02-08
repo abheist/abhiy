@@ -6,7 +6,7 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-    <header {{#if image}} style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+{{!--
         <nav {{#if image}}overlay{{/if}}>
             {{#if @blog.logo}}
                 <a href="{{@blog.url}}">
@@ -20,52 +20,53 @@
             {{/if}}
         </nav>
     </header>
+--}}
 
-    <main role="main">
+    <main role="main" class="main-post-box">
+        {{#if image}}
+            <header>
+                <div class="post-header"
+                     style="background: url({{image}});
+                             background-size: cover;
+                             background-position:center;
+                             background-repeat: no-repeat;">
+                </div>
+            </header>
+        {{/if}}
         <article class="{{post_class}}">
             <header>
-                <h1>{{title}}</h1>
-                <section>
-                    <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date format="DD MMMM YYYY"}}
-                    </time>
-                    {{tags prefix="on"}}
+                <h1 class="single-post-heading">{{title}}</h1>
+                <section class="flex-row margin-top-15">
+                    {{#author}}
+                        {{#if image}}
+                            <a href="{{ur}}">
+                                <div style="width: 30px; height: 30px; background: url('{{image}}'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 100%;"></div>
+                            </a>
+                            <div class="flex-column margin-left-14">
+                                <a href="{{url}}">
+                                    <p class="post-box-author-name">
+                                        {{name}} ·
+                                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                                            {{date format="DD MMMM YYYY"}}
+                                        </time>
+                                    </p>
+                                </a>
+                                {{#if location}}
+                                    <h2>{{location}}</h2>
+                                {{/if}}
+                            </div>
+                        {{/if}}
+                    {{/author}}
                 </section>
             </header>
-            <section>
+            <section class="single-post-content">
                 {{content}}
             </section>
             <footer>
+                <div class="post-tags">
+                    {{tags}}
+                </div>
                 {{!-- Everything inside the #author tags pulls data from the author --}}
-                {{#author}}
-                    {{#if image}}
-                        <figure>
-                            <a href="{{url}}" style="background-image: url({{image}})"><span>{{name}}
-                                's Picture</span></a>
-                        </figure>
-                    {{/if}}
-
-                    <section>
-                        <h4>
-                            <a href="{{url}}">{{name}}</a>
-                        </h4>
-                        {{#if bio}}
-                            <p>{{bio}}</p>
-                        {{else}}
-                            <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                        {{/if}}
-                        <div>
-                            {{#if location}}
-                                <span>{{location}}</span>
-                            {{/if}}
-                            {{#if website}}
-                                <span><a href="{{website}}">{{website}}</a></span>
-                            {{/if}}
-                        </div>
-                    </section>
-
-                {{/author}}
-
                 <section>
                     <h4>Share this post</h4>
                     <a class="icon-twitter"
@@ -82,7 +83,6 @@
                         <span class="hidden">Google+</span>
                     </a>
                 </section>
-
                 {{!-- Email subscribe form at the bottom of the page --}}
                 {{#if @labs.subscribers}}
                     <section class="gh-subscribe">
@@ -93,9 +93,7 @@
                                 href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
                     </section>
                 {{/if}}
-
             </footer>
-
         </article>
     </main>
 
