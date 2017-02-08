@@ -284,3 +284,15 @@ a {
 .post-tags a {
     color: #0077B5;
 }
+
+.other-page-headers {
+    width: 715px;
+    padding: 15px;
+    background: #FFFFFF;
+    margin: -75px auto 0;
+}
+
+.other-page-headers-pic {
+    height: 120px;
+    width: 120px;
+}
