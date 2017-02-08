@@ -399,8 +399,8 @@ a {
     width: 100%;
     display: block;
     content: " ";
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     position: absolute;
     background: #0077B5;
     animation: border-expand 0.2s cubic-bezier(0.4, 0, 0.4, 1) 0.01s alternate forwards;
