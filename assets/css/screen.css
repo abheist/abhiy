@@ -276,6 +276,9 @@ a {
 
 .post-tags a {
     color: #0077B5;
+}
+
+.single-post-tags a {
     border-radius: 7px;
     padding: 5px 10px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
