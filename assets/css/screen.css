@@ -2842,6 +2842,7 @@ a {
     border-radius: 20px 0 0 20px;
     font-size: 18px;
     text-indent: 10px;
+    outline: none;
 }
 
 .gh-subscribe .subscribe-div button {
@@ -2852,6 +2853,7 @@ a {
     color: #fff;
     background: #1da1f2;
     border-radius: 0 20px 20px 0;
+    outline: none;
 }
 
 .gh-subscribe .subscribe-rss {
