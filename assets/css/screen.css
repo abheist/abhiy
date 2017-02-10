@@ -2817,3 +2817,58 @@ a {
     justify-content: space-around;
     color: #FFFFFF;
 }
+
+.gh-subscribe .gh-subscribe-title {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.gh-subscribe p {
+    text-align: center;
+    font-weight: 400;
+}
+
+.gh-subscribe .subscribe-div {
+    margin-left: calc(50% - 215px);
+    margin-top: 25px;
+}
+
+.gh-subscribe .subscribe-div input {
+    float: left;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 300px;
+    border-radius: 20px 0 0 20px;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+.gh-subscribe .subscribe-div button {
+    height: 42px;
+    border: 0;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #1da1f2;
+    border-radius: 0 20px 20px 0;
+}
+
+.gh-subscribe .subscribe-rss {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.feedly-color {
+    color: #2bb24c;
+}
+
+.rss-weight {
+    font-weight: 700;
+}
+
+.margin-hr {
+    margin: 50px 0;
+    color: red;
+    border: 0.2px solid rgba(0, 0, 0, 0.08);
+}

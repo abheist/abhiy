@@ -66,6 +66,7 @@
                 <div class="post-tags">
                     {{tags}}
                 </div>
+                <hr class="margin-hr">
                 {{!-- Everything inside the #author tags pulls data from the author --}}
                 <section class="sharing-box">
                     <h4 class="sharing-heading">Share this post</h4>
@@ -87,13 +88,24 @@
                     </div>
                 </section>
                 {{!-- Email subscribe form at the bottom of the page --}}
+                <hr class="margin-hr">
                 {{#if @labs.subscribers}}
                     <section class="gh-subscribe">
                         <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
                         <p>Get the latest posts delivered right to your inbox.</p>
-                        {{subscribe_form placeholder="Your email address"}}
-                        <span class="gh-subscribe-rss">or subscribe <a
-                                href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
+                        <div class="subscribe-div">
+                            {{subscribe_form placeholder="Your email address"}}
+                        </div>
+                        <div class="subscribe-rss">
+                            <span class="gh-subscribe-rss">or subscribe
+                                <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">
+                                        via
+                                        <span class="rss-weight">RSS</span>
+                                    with
+                                    <span class="feedly-color">Feedly!</span>
+                                </a>
+                            </span>
+                        </div>
                     </section>
                 {{/if}}
             </footer>
