@@ -113,15 +113,32 @@
     </main>
 
     {{!-- Links to Previous/Next posts --}}
-    <aside>
+    <aside class="side-posts">
+
+
         {{#next_post}}
-            <a {{#if image}} style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+            <div class="side-post left-side-post">
+                {{#if image}}
+                    <div class="side-post-image"
+                         style="background: url({{image}}); background-size: cover; background-position: center;
+                                 background-repeat: no-repeat;"></div>
+                {{/if}}
                 <section>
                     <h2>{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
+                    <p>{{excerpt words=19}}&hellip;</p>
                 </section>
-            </a>
+            </div>
         {{/next_post}}
+
+
+            <!--{{#next_post}}-->
+        <!--<a {{#if image}} style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">-->
+        <!--<section>-->
+        <!--<h2>{{title}}</h2>-->
+            {{excerpt words="19"}}
+        <!--</section>-->
+        <!--</a>-->
+            <!--{{/next_post}}-->
         {{#prev_post}}
             <a {{#if image}} style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
                 <section>

@@ -2877,3 +2877,20 @@ a {
     color: red;
     border: 0.2px solid rgba(0, 0, 0, 0.08);
 }
+
+.side-posts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.side-post {
+    width: 300px;
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.side-post-image {
+    border-radius: 3px 3px 0 0;
+    height: 200px;
+    width: 300px;
+}
